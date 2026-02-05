@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HubSpot System Map</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: "default" });
+  </script>
+  <style>
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #f7f9fc;
+      padding: 24px;
+    }
+    .mermaid {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HubSpot One-Page System Map</h1>
+
+<div class="mermaid">
+flowchart TB
+A[Inbound Lead<br/>Forms / Ads / Chat]
+B[Outbound Lead<br/>Manual Import / Lists]
+C[Website Visitor<br/>Tracking]
+
+D[Contacts]
+E[Companies]
+F[Deals]
+G[Tickets]
+
+F1[Sales Pipeline]
+F2[Renewals]
+F3[Upsell]
+
+G1[Support]
+G2[Onboarding]
+
+S1[SDR Sequence]
+S2[Demo Follow-up]
+S3[Re-engagement]
+
+W1[Lead Scoring]
+W2[Lifecycle Automation]
+W3[Deal Automation]
+
+R1[Sales Dashboard]
+R2[Marketing Dashboard]
+R3[RevOps Dashboard]
+
+A --> D
+B --> D
+C --> D
+D --> E
+D --> F
+F --> F1
+F --> F2
+F --> F3
+G --> G1
+G --> G2
+D --> S1
+D --> S2
+D --> S3
+D --> W1 --> W2 --> W3
+F --> R1
+D --> R2
+F --> R3
+</div>
+
+</body>
+</html>
